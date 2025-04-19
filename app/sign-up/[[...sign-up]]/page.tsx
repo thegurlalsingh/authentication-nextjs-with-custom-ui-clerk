@@ -8,7 +8,7 @@ export default function SignUpPage() {
   const { isLoaded, signUp, setActive } = useSignUp();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [username, setUsername] = useState(''); // Added username state
+  const [username, setUsername] = useState(''); 
   const [code, setCode] = useState('');
   const [pendingVerification, setPendingVerification] = useState(false);
   const [error, setError] = useState('');
@@ -22,10 +22,9 @@ export default function SignUpPage() {
       const signUpResult = await signUp.create({
         emailAddress: email,
         password,
-        username, // Send username in the sign-up request
+        username, 
       });
 
-      // After successful sign-up, trigger email verification
       await signUp.prepareEmailAddressVerification({ strategy: 'email_code' });
       setPendingVerification(true);
     } catch (err: any) {
@@ -42,9 +41,7 @@ export default function SignUpPage() {
 
       if (result.status === 'complete') {
         await setActive({ session: result.createdSessionId });
-
-        // Redirect to main page after successful verification and sign-in
-        router.push('/'); // This should take you to the home page
+        router.push('/'); 
       }
     } catch (err: any) {
       setError(err.errors?.[0]?.message || 'Verification failed');
@@ -81,7 +78,7 @@ export default function SignUpPage() {
               type="text"
               placeholder="Username"
               value={username}
-              onChange={(e) => setUsername(e.target.value)} // Handle username input
+              onChange={(e) => setUsername(e.target.value)} 
               required
               style={{
                 width: '100%',

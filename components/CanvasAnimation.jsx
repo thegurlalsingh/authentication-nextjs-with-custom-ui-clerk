@@ -1,4 +1,4 @@
-"use client"; // Add this if you're using Next.js 13+ app directory
+"use client"; 
 
 import { useEffect, useRef } from "react";
 
@@ -88,7 +88,6 @@ const CanvasTrail = () => {
       window.requestAnimationFrame(update);
     };
 
-    // Event Listeners
     const handleClick = (e) => updateMousePosition(e.pageX, e.pageY);
     const handleMouseMove = (e) => {
       mouseMoved = true;
