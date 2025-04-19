@@ -8,7 +8,7 @@ import {
 import { Inter } from 'next/font/google';
 
 export const metadata = {
-  title: 'cg-canvas-animated-gradients',
+  title: 'assignment',
   description: 'Next.js app with animated canvas gradients',
 };
 
