@@ -15,10 +15,10 @@ export default function Header() {
             <h1>Welcome to Dashboard</h1>
             <h2>Please click on sign-in or sign-up to proceed</h2>
             <div className={styles.authButtonsWrapper}>
-              <Link href="/sign-in" passHref>
+              <Link href="/sign-in">
                 <button className={styles.button}>Sign In</button>
               </Link>
-              <Link href="/sign-up" passHref>
+              <Link href="/sign-up">
                 <button className={styles.button}>Sign Up</button>
               </Link>
             </div>
